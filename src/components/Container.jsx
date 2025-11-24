@@ -2,9 +2,8 @@ import React from 'react';
 
 const Container = ({children}) => {
     return (
-        <div className='container mx-auto'>
-          {children}  
-        </div>
+      // w-11/12 py-10
+      <div className="container  w-11/12 py-10 mx-auto">{children}</div>
     );
 };
 

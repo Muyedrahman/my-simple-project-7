@@ -1,32 +1,38 @@
-
 import './App.css'
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CountBox from './components/CountBox';
+import CountBox from "./components/CountBox";
+import CountContainer from './components/CountContainer';
+import { Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 
 
-
+const loadTickets = () => fetch("/tickets.json").then((res) => res.json());
 
 function App() {
+  const ticketsPromise = loadTickets();
+  // console.log(ticketsPromise)
   
 
   return (
-    <>
-    <Navbar />
+    <div className="">
+      <header>
+        <Navbar />
+      </header>
 
-    <CountBox />
-{/* card */}
-
+      <section>
+        <Suspense fallback={"Loading..."} >
+          <CountContainer promise={ticketsPromise}></CountContainer>
+        </Suspense>
+      </section>
       
+      <ToastContainer />
 
-    <Footer />
-      
-
-
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
 export default App
