@@ -11,9 +11,7 @@ const TaskStatus = ({ ticket, handleResolvedTask }) => {
         Complete
       </button>
 
-      {/* <p className="font-semibold">Select a ticket to add to Task Status</p>
-        <h2 className="font-bold text-2xl md:text-3xl">Resolved Task</h2>
-        <p className="font-semibold">No resolved tasks yet.</p> */}
+      
     </div>
   );
 };

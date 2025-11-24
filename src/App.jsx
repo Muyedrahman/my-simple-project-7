@@ -1,11 +1,11 @@
 import './App.css'
-
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import CountBox from "./components/CountBox";
 import CountContainer from './components/CountContainer';
 import { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
+import Loading from './components/Loading';
+
 
 
 
@@ -23,7 +23,7 @@ function App() {
       </header>
 
       <section>
-        <Suspense fallback={"Loading..."} >
+        <Suspense fallback={ <Loading /> } >
           <CountContainer promise={ticketsPromise}></CountContainer>
         </Suspense>
       </section>

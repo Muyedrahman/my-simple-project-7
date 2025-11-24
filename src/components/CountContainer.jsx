@@ -8,11 +8,7 @@ import ResolvedTask from "./cards/ResolvedTask";
 
 const CountContainer = ({ promise }) => {
   const count = use(promise);
-  // 111111111111111
-  // const originalTickets = use(promise);
-//   console.log(count);
-// 111111111111
-// const [allTickets, setAllTickets] = useState(originalTickets);
+  
 const [allTickets, setAllTickets] = useState(count);
 
 
@@ -93,7 +89,7 @@ const [resolvedTask, setResolvedTask] = useState([]);
                 // <h2>{order.title}</h2>
               ))}
             </div>
-            {/* <p>No resolved tasks yet.</p> */}
+          
           </div>
         </div>
       </Container>
