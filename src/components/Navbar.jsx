@@ -4,14 +4,14 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-      <nav className="navbar bg-base-100 shadow-sm border-b-[0.5px] mx-auto">
-        {/* Left */}
-        <div className="flex-1">
+      <div className="navbar bg-base-100 shadow-sm">
+        {/* Left: Logo */}
+        <div className="navbar-start">
           <a className="btn btn-ghost text-xl font-bold">CS — Ticket System</a>
         </div>
 
         {/* Right */}
-        <div className="flex-none">
+        <div className="navbar-end flex items-center gap-4">
           {/* Mobile Menu */}
           <div className="dropdown dropdown-end lg:hidden">
             <div tabIndex={0} role="button" className="btn btn-ghost">
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <a>Contact</a>
               </li>
               <li>
-                <a className="text-primary font-bold">+ New Ticket</a>
+                <a className="btn btn-primary font-bold mt-2">+ New Ticket</a>
               </li>
             </ul>
           </div>
@@ -81,12 +81,12 @@ const Navbar = () => {
             </li>
           </ul>
 
-          {/* Desktop Button */}
-          <button className="btn btn-primary hidden lg:flex ml-2">
-            <p className="text-xl"> + </p> New Ticket
+          {/* Desktop Button (Now aligned beside menu) */}
+          <button className="btn btn-primary hidden lg:flex">
+            <span className="text-xl font-bold">+</span> New Ticket
           </button>
         </div>
-      </nav>
+      </div>
 
       // <nav className='navbar bg-base-100 shadow-sm border-b-[0.5px] mx-auto'>
 
