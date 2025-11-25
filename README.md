@@ -14,3 +14,7 @@ ans: By lifting state up to the closest common parent component. The parent hold
 
 5/ How is event handling done in React?
 ans: Event handling in React is similar to HTML but with key differences in syntax and underlying implementation, primarily through the use of JSX attributes, camel=case naming, and a synthetic event system.
+
+1.Repo link: https://github.com/Muyedrahman/my-simple-project-7
+
+2.Live Link: https://lighthearted-mooncake-8fb42e.netlify.app
